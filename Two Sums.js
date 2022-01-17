@@ -1,10 +1,15 @@
-var twoSum = function (nums, target) {
+var twoSum = function(nums, target) {
   for (var i= 0; i < nums.length; i++) {
-    if (nums[i] + nums[i+1] === target) {
+      for (var j= i+1; j < nums.length; j++){
+
+      if (nums[i] + nums[j] === target) {
         var result = [];
-        result.push(nums[i]);
-        result.push(nums[i+1]);
+        result.push(i);
+        result.push(j);
         return result;
     }
+
+  }
+
 }
 };
